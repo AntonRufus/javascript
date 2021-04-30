@@ -139,11 +139,13 @@ section #text span {
   text-shadow: 0 0 0.5em #000;
   transition: all 0.3s;
 }
+
 .project p:hover {
   text-shadow: 0 0 0.5em #fff;
   transition: all 0.3s;
   font-weight: bold;
 }
+
 .project img {
   width: 35em;
   transition: all 0.3s;
@@ -155,4 +157,19 @@ section #text span {
   transition: all 0.3s;
   border-radius: 1em;
   box-shadow: 0 0 1em #fff;
+}
+
+@media only screen and (max-width: 725px) {
+  .project img {
+    width: 25em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project img {
+    width: 20em;
+  }
+  .project img:hover {
+    transform: scale(1);
+  }
 }
