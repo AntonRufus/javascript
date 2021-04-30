@@ -1,0 +1,283 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #6dfdfd, #6f32ff);
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+    box-shadow: 0rem 0rem 0rem rgba(197, 196, 196, 0.5);
+  }
+  to {
+    transform: scale(1.1);
+    box-shadow: 0rem 0rem 0.5rem rgba(197, 196, 196, 0.5);
+  }
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.snare-pad,
+.crash-pad,
+.cowbell-pad,
+.kick-pad,
+.clap-pad,
+.ride-pad,
+.openhat-pad,
+.tom-pad,
+.perc-pad,
+.shaker-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 3.5rem;
+  margin: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgba(50, 112, 226, 0.5);
+}
+
+.snare-pad {
+  background: rgba(228, 231, 53, 0.5);
+}
+
+.hihat-pad {
+  background: rgba(231, 53, 222, 0.5);
+}
+
+.clap-pad {
+  background: rgba(53, 231, 231, 0.5);
+}
+
+.cowbell-pad {
+  background: rgba(68, 231, 53, 0.5);
+}
+
+.crash-pad {
+  background: rgba(231, 160, 53, 0.5);
+}
+
+.openhat-pad {
+  background: rgba(231, 53, 53, 0.5);
+}
+
+.perc-pad {
+  background: rgba(145, 53, 231, 0.5);
+}
+
+.ride-pad {
+  background: rgba(192, 231, 53, 0.5);
+}
+
+.shaker-pad {
+  background: rgba(53, 71, 231, 0.5);
+}
+
+.tom-pad {
+  background: rgba(89, 0, 253, 0.5);
+}
+
+.kick-pad.active,
+.crash-pad.active,
+.cowbell-pad.active,
+.clap-pad.active,
+.ride-pad.active,
+.snare-pad.active,
+.openhat-pad.active,
+.perc-pad.active,
+.shaker-pad.active,
+.tom-pad.active,
+.hihat-pad.active {
+  border-radius: 5px;
+  border: 1px solid darkslategrey;
+}
+
+.kick-pad.active {
+  background: rgb(50, 112, 226);
+}
+
+.snare-pad.active {
+  background: rgb(228, 231, 53);
+}
+
+.hihat-pad.active {
+  background: rgb(231, 53, 222);
+}
+
+.clap-pad.active {
+  background: rgb(53, 231, 231);
+}
+
+.cowbell-pad.active {
+  background: rgb(68, 231, 53);
+}
+
+.crash-pad.active {
+  background: rgb(231, 160, 53);
+}
+
+.openhat-pad.active {
+  background: rgb(231, 53, 53);
+}
+
+.perc-pad.active {
+  background: rgb(145, 53, 231);
+}
+
+.ride-pad.active {
+  background: rgb(192, 231, 53);
+}
+
+.shaker-pad.active {
+  background: rgb(53, 71, 231);
+}
+
+.tom-pad.active {
+  background: rgb(89, 0, 253);
+}
+
+.snare,
+.cowbell,
+.crash,
+.kick,
+.ride,
+.openhat,
+.hihat,
+.tom,
+.perc,
+.shaker,
+.clap {
+  display: flex;
+}
+
+.snare-track,
+.clap-track,
+.crash-track,
+.cowbell-track,
+.openhat-track,
+.kick-track,
+.ride-track,
+.shaker-track,
+.tom-track,
+.perc-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 65%;
+  margin-top: 0rem;
+  justify-content: space-between;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.controls h1 {
+  width: 11rem;
+}
+
+select,
+.play,
+.controls button {
+  background: rgb(54, 54, 54);
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  margin-left: 2.5rem;
+  width: 7rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  width: 10rem;
+  text-align: center;
+}
+
+.active,
+.mute.active {
+  background: rgb(116, 17, 17);
+  transition: all 0.5s ease;
+}
+.play-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  align-items: center;
+}
+.tempo-block {
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+input.tempo-slider {
+  -webkit-appearance: none;
+  background: rgb(54, 54, 54);
+  cursor: pointer;
+  border-radius: 1rem;
+  width: 40%;
+}
+
+.main-menu {
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1.1rem;
+  background: rgb(35, 35, 35);
+  transition: all 0.3s;
+  width: 11rem;
+  font-weight: bold;
+}
+
+a:hover {
+  background: #19adad;
+  transition: all 0.3s;
+}
