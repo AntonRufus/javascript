@@ -1,0 +1,22 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "homepage": "https://github.com/AntonRufus/javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonRufus/javascript.git"
+  },
+  "author": "Anton Zhtvotovskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonRufus/javascript/issues"
+  },
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
