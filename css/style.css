@@ -137,13 +137,12 @@ section #text span {
   text-align: center;
   font-size: 1.8em;
   text-shadow: 0 0 0.5em #000;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .project p:hover {
   text-shadow: 0 0 0.5em #fff;
-  transition: all 0.3s;
-  font-weight: bold;
+  transition: all 0.5s;
 }
 
 .project img {
