@@ -159,6 +159,16 @@ section #text span {
   box-shadow: 0 0 1em #fff;
 }
 
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 75%;
+  }
+
+  #btn {
+    transform: translateY(50px);
+  }
+}
+
 @media only screen and (max-width: 725px) {
   .project img {
     width: 25em;
