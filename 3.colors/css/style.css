@@ -1,0 +1,305 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(51, 51, 51);
+  font-family: sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #000; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #fff; /* creates padding around scroll thumb */
+}
+
+body {
+  -moz-scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-width: thin; /* "auto" or "thin" */
+  -moz-scrollbar-color: #fff #000; /* scroll thumb and track */
+  scrollbar-color: #fff #000; /* scroll thumb and track */
+}
+
+path,
+i,
+svg {
+  pointer-events: none;
+}
+
+.colors {
+  min-height: 80vh;
+  display: flex;
+  color: rgb(212, 212, 212);
+}
+
+.color {
+  height: 80vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  overflow: hidden;
+}
+
+.color h2 {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*  Sliders */ /* ----------------------------------------------------------------------- */
+.sliders {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0%;
+  background: rgb(240, 240, 240);
+  color: #000;
+  width: 80%;
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  /* add adjustment class */
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+}
+
+.sliders.active {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: all;
+}
+
+.sliders button,
+.close-library,
+.close-save {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  background: rgb(73, 73, 73);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20vh;
+}
+
+.panel button {
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 63);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.panel p {
+  font-size: 1.2rem;
+}
+
+.menu-panel,
+.library-panel,
+.generate-panel,
+.save-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adjust,
+.lock {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+/* Slider stuff  */ /* ----------------------------------------------------------------------- */
+input[type="range"] {
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/* Clipboard */ /* ----------------------------------------------------------------------- */
+.library-container,
+.save-container,
+.copy-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.library-popup,
+.save-popup,
+.copy-popup {
+  background: #fff;
+  min-width: 25%;
+  min-height: 25vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: transform 0.5s ease;
+  transform: translateY(-2rem);
+  box-shadow: 0 0 3rem #fff;
+}
+
+.library-popup h3,
+.save-popup h3,
+.copy-popup h3 {
+  font-size: 1.6rem;
+}
+
+.library-popup h4,
+.save-popup h4,
+.copy-popup h4 {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.library-container.active,
+.save-container.active,
+.copy-container.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.library-popup.active,
+.save-popup.active,
+.copy-popup.active {
+  transform: translateY(0);
+  box-shadow: 0 0 2rem #fff;
+}
+
+.save-name {
+  font-size: 1.5rem;
+  height: 2.5rem;
+}
+
+.submit-save,
+.pick-paette-btn {
+  padding: 0.75rem 1.5rem;
+  margin: 1rem;
+  font-size: 1rem;
+  background: rgb(31, 33, 63);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.pick-paette-btn {
+  padding: 1rem;
+  height: 5rem;
+  margin: 0;
+  border-radius: 0;
+  text-shadow: 0 0 0.25rem #f00;
+}
+
+.library-popup {
+  min-width: 40%;
+  padding: 1rem;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.current-palette {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 2rem;
+}
+
+.current-palette h4 {
+  flex: 1;
+}
+
+.small-preview {
+  display: flex;
+  flex: 1;
+}
+
+.small-preview div {
+  height: 5rem;
+  flex: 1;
+}
+
+.library-popup::-webkit-scrollbar {
+  width: 9px; /* width of the entire scrollbar */
+}
+
+.library-popup::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+.library-popup::-webkit-scrollbar-thumb {
+  background-color: #000; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #000; /* creates padding around scroll thumb */
+}
+
+.library-popup {
+  -moz-scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-width: thin; /* "auto" or "thin" */
+  -moz-scrollbar-color: lightgray #000; /* scroll thumb and track */
+  scrollbar-color: lightgray #000; /* scroll thumb and track */
+}
+
+.close-library {
+  border-top-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 60%;
+  }
+}

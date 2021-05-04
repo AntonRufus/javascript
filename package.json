@@ -14,9 +14,7 @@
     "url": "https://github.com/AntonRufus/javascript/issues"
   },
   "scripts": {
-    "devserver": "live-server",
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "live-server"
   },
   "devDependencies": {
     "prettier": "^2.2.1",
