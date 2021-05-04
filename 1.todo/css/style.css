@@ -166,3 +166,14 @@ a:hover {
   background-image: linear-gradient(120deg, #fa8e00, #ffc251);
   transition: all 0.3s;
 }
+
+@media only screen and (max-width: 1100px) {
+  html {
+    font-size: 75%;
+  }
+
+  select {
+    width: 11rem;
+    height: 41px;
+  }
+}
