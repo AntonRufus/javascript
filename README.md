@@ -1,4 +1,4 @@
-# JavaScript projects
+# JavaScript project
 
 ## Bunch of JavaScript apps collected in one project.
 
@@ -10,7 +10,15 @@
 
 ### CSS
 
+    - Flexbox
+    - Font Awesome
+
 ### JavaScript
+
+    - GSAP
+    - Scroll Magic
+    - Barba
+    - Chroma
 
 ## Feel free to contact me via LinkedIn:
 

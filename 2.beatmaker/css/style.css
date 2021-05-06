@@ -261,9 +261,6 @@ input.tempo-slider {
   width: 40%;
 }
 
-.main-menu {
-}
-
 a {
   text-decoration: none;
   text-align: center;
@@ -273,7 +270,7 @@ a {
   padding: 1.1rem;
   background: rgb(35, 35, 35);
   transition: all 0.3s;
-  width: 11rem;
+  width: 7rem;
   font-weight: bold;
 }
 

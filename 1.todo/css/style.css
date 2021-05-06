@@ -16,6 +16,10 @@ header {
   font-size: 1.5rem;
 }
 
+header p {
+  width: 12rem;
+}
+
 header,
 form {
   min-height: 15vh;
@@ -146,7 +150,9 @@ select {
 .main-menu {
   display: flex;
   margin: 0 auto;
-  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
 
 a {
@@ -155,10 +161,9 @@ a {
   border-radius: 5px;
   font-size: 1.5rem;
   padding: 1.1rem;
-  color: #000;
   background-image: linear-gradient(120deg, #ffc251, #fa8e00);
   transition: all 0.3s;
-  width: 11rem;
+  width: 7rem;
   font-weight: bold;
 }
 
