@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+    <title>Travel</title>
+  </head>
+  <body data-barba="wrapper">
+    <!-- header -->
+    <header class="nav-header">
+      <h1>
+        <a href="./index.html" id="logo">days.</a>
+      </h1>
+      <div class="nav-menu">
+        <a id="main-home" target="_blank" href="../index.html"
+          ><i class="fas fa-home"></i
+        ></a>
+        <div class="burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main part -->
+    <main data-barba="container" data-barba-namespace="home">
+      <!-- section #1 -->
+      <section class="mountain slide">
+        <!-- main image -->
+        <div class="hero-img">
+          <img src="./img/forest.png" alt="Forest image" />
+          <div class="reveal-img"></div>
+        </div>
+        <!-- description -->
+        <div class="hero-desc">
+          <!-- description's title -->
+          <div class="title">
+            <h2>
+              Freedom at your <span class="mountain-span">fingertips.</span>
+            </h2>
+            <div class="title-swipe t-swipe-1"></div>
+          </div>
+          <!-- description's paragraph -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            similique aperiam harum necessitatibus placeat, quaerat nesciunt
+            accusamus eligendi est animi quisquam doloribus eos tempore
+            aspernatur.
+          </p>
+          <!-- explore button -->
+          <a href="./mountain/index.html" class="explore mountain-exp"
+            >Explore</a
+          >
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+
+      <!-- section #2 -->
+      <section class="hike slide">
+        <!-- main image -->
+        <div class="hero-img">
+          <img src="./img/hike.png" alt="Hike image" />
+          <div class="reveal-img"></div>
+        </div>
+        <!-- description -->
+        <div class="hero-desc">
+          <!-- description's title -->
+          <div class="title">
+            <h2>Travel makes one <span class="hike-span">modest.</span></h2>
+            <div class="title-swipe t-swipe-2"></div>
+          </div>
+          <!-- description's paragraph -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eum
+            architecto tenetur fugit molestias quas minima consequuntur impedit
+            voluptates, vero hic dignissimos repudiandae, accusamus cum quam
+            inventore!
+          </p>
+          <!-- explore button -->
+          <a href="hike/index.html" class="explore hike-exp">Explore</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+
+      <!-- section #3 -->
+      <section class="fashion slide">
+        <!-- main image -->
+        <div class="hero-img">
+          <img src="./img/fashion.png" alt="Fashion image" />
+          <div class="reveal-img"></div>
+        </div>
+        <!-- description -->
+        <div class="hero-desc">
+          <!-- description's title -->
+          <div class="title">
+            <h2>The world is a <span class="fashion-span">book.</span></h2>
+            <div class="title-swipe t-swipe-3"></div>
+          </div>
+          <!-- description's paragraph -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id
+            amet voluptates nisi modi, rerum ipsam porro! Earum laudantium a
+            saepe? Nulla vero modi alias eum natus et. Odio, accusantium.
+          </p>
+          <!-- explore button -->
+          <a href="./fashion/index.html" class="explore fashion-exp">Explore</a>
+          <div class="reveal-text"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- nav bar -->
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <h3>Twitter</h3>
+        <h3>Youtube</h3>
+        <h3>Instagram</h3>
+      </ul>
+
+      <!-- contact -->
+      <div class="contact">
+        <h2>Stay in touch.</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+          ut sed nihil, sit quibusdam labore maxime pariatur odio quo expedita
+          itaque nemo non quam laborum quidem iste, repudiandae, necessitatibus
+          commodi!
+        </p>
+      </div>
+    </nav>
+
+    <!-- cursor -->
+    <div class="cursor">
+      <span class="cursor-text"></span>
+    </div>
+
+    <!-- swipes -->
+    <div class="swipe swipe-1"></div>
+    <div class="swipe swipe-2"></div>
+    <div class="swipe swipe-3"></div>
+
+    <!-- javascript -->
+    <!-- scroll magic -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- animation gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+      integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- indicators -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"
+      integrity="sha512-RvUydNGlqYJapy0t4AH8hDv/It+zKsv4wOQGb+iOnEfa6NnF2fzjXgRy+FDjSpMfC3sjokNUzsfYZaZ8QAwIxg=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- barba -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- index -->
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

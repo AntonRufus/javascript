@@ -1,0 +1,597 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #000; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #000; /* creates padding around scroll thumb */
+}
+
+body {
+  -moz-scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-width: thin; /* "auto" or "thin" */
+  -moz-scrollbar-color: #fff #000; /* scroll thumb and track */
+  scrollbar-color: #fff #000; /* scroll thumb and track */
+}
+
+body {
+  background-color: #17181a;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* header - navigation */
+#logo {
+  color: #fff;
+  font-family: "Abril Fatface", sans-serif;
+  transition: all 0.5s;
+}
+
+.nav-header {
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8%;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.nav-menu i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.line-1,
+.line-2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #fff;
+  pointer-events: none;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -wevkit-clip-path: circle(50px at 100% -10%);
+}
+
+.burger {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.nav-links {
+  font-size: 3rem;
+  flex-basis: 30rem;
+}
+
+.nav-links h3 {
+  padding: 3rem 0;
+}
+
+.contact {
+  flex-basis: 30rem;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+/* main part */
+main {
+  position: absolute;
+}
+
+.slide {
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background: #17181a;
+}
+
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-span {
+  color: rgb(255, 139, 93);
+}
+
+.mountain-span {
+  color: rgb(86, 124, 228);
+}
+
+.hike-span {
+  color: rgb(167, 110, 231);
+}
+
+.hero-desc h2 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 5rem;
+}
+
+.hero-desc p {
+  padding: 3rem 0rem;
+  font-size: 1.5rem;
+  color: rgb(224, 224, 224);
+}
+
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  background: #17181a;
+  width: 100%;
+  height: 150%;
+  left: 0;
+  top: -15%;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s;
+  transition-property: transform, background;
+  transform-origin: 75% 75%;
+}
+
+.cursor.nav-active {
+  background: rgba(0, 255, 255, 0.8);
+  transition: all 0.5s;
+  transform: scale(3);
+}
+
+.cursor.explore-active {
+  background: rgba(136, 255, 0, 0.8);
+  transition: all 0.5s;
+  transform: scale(3);
+}
+
+.cursor span {
+  color: #fff;
+  font-size: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  position: relative;
+  overflow: hidden;
+}
+
+.title-swipe {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  mix-blend-mode: darken;
+  transform: translateY(100%);
+}
+
+.t-swipe-1 {
+  background: rgb(86, 124, 228);
+}
+
+.t-swipe-2 {
+  background: rgb(167, 110, 231);
+}
+
+.t-swipe-3 {
+  background: rgb(255, 139, 93);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+/* OTHER PAGES */
+.hike-1,
+.hike-2,
+.hike-3,
+.fashion-1,
+.fashion-2,
+.fashion-3,
+.mountain-1,
+.mountain-2,
+.mountain-3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: #fff;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.hike-img,
+.fashion-img,
+.mountain-img {
+  height: 70vh;
+  flex-basis: 30rem;
+}
+
+.hike-text,
+.fashion-text,
+.mountain-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+
+.hike-img img,
+.fashion-img img,
+.mountain-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hike-text h1,
+.fashion-text h1,
+.mountain-text h1 {
+  font-size: 6rem;
+  padding: 5rem 0;
+}
+
+.hike-1 h1,
+.fashion-1 h1,
+.mountain-1 h1 {
+  color: rgb(255, 139, 93);
+}
+
+.hike-2 h1,
+.fashion-2 h1,
+.mountain-2 h1 {
+  color: rgb(167, 110, 231);
+}
+
+.hike-3 h1,
+.fashion-3 h1,
+.mountain-3 h1 {
+  color: rgb(86, 124, 228);
+}
+
+.hike-text p,
+.fashion-text p,
+.mountain-text p {
+  font-size: 2rem;
+  padding: 2rem 2rem 0 0;
+  margin-bottom: 10rem;
+}
+
+.hike-nr,
+.fashion-nr,
+.mountain-nr {
+  font-size: 15rem;
+  position: absolute;
+  left: 40%;
+  bottom: 5%;
+  opacity: 0.3;
+  color: rgb(255, 255, 255);
+}
+
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe-1 {
+  background: rgb(167, 110, 231);
+  z-index: 50;
+}
+
+.swipe-2 {
+  background: rgb(86, 124, 228);
+  z-index: 40;
+}
+
+.swipe-3 {
+  background: rgb(255, 139, 93);
+  z-index: 30;
+}
+
+.fashion-3,
+.hike-3,
+.mountain-3 {
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  .hero-img {
+    height: 50vh;
+  }
+
+  .number {
+    text-shadow: 1px 1px 1px black;
+  }
+
+  .mountain-img img,
+  .hike-img img,
+  .fashion-img img {
+    object-position: top;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-menu {
+    width: 15%;
+  }
+
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .hero-desc {
+    padding: 0;
+  }
+
+  .hero-desc h2 {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  .hero-desc p {
+    padding: 2rem 1rem;
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-desc .explore {
+    width: 40%;
+    margin: auto;
+  }
+
+  .detail-slide {
+    width: 90%;
+    text-align: center;
+    margin-right: 1rem;
+  }
+
+  .fashion-text,
+  .mountain-text,
+  .hike-text {
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .fashion-text h1,
+  .mountain-text h1,
+  .hike-text h1 {
+    padding: 2rem 0;
+  }
+
+  .number {
+    font-size: 8rem;
+    bottom: 15%;
+  }
+
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .nav-links h3 {
+    padding: 1rem 0;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .contact p {
+    font-size: 1.2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .line-1,
+  .line-2 {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.65rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 60%;
+  }
+
+  .nav-menu {
+    width: 16%;
+  }
+
+  .line-1,
+  .line-2 {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.8rem;
+  }
+
+  .hero-img {
+    margin-top: 1rem;
+  }
+
+  .hero-desc h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .hero-desc p {
+    padding: 1rem 0;
+    width: 80%;
+    font-size: 1.3rem;
+  }
+
+  .hero-desc .explore {
+    margin-top: 1rem;
+  }
+
+  .fashion-text h1,
+  .mountain-text h1,
+  .hike-text h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-img {
+    height: 65vh;
+  }
+
+  .detail-slide {
+    margin-top: 0;
+  }
+
+  .number {
+    font-size: 8rem;
+    top: 27.5%;
+    left: 65%;
+  }
+
+  .fashion-text,
+  .mountain-text,
+  .hike-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .fashion-text h1,
+  .mountain-text h1,
+  .hike-text h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hike-text p,
+  .fashion-text p,
+  .mountain-text p {
+    margin-bottom: 1rem;
+  }
+}
