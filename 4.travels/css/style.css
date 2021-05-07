@@ -94,8 +94,8 @@ body {
   align-items: center;
   z-index: 1;
   opacity: 1;
-  clip-path: circle(50px at 100% -10%);
-  -wevkit-clip-path: circle(50px at 100% -10%);
+  clip-path: circle(50px at 100% -20%);
+  -wevkit-clip-path: circle(50px at 100% -20%);
 }
 
 .burger {
