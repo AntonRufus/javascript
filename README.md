@@ -11,6 +11,7 @@
 ### CSS
 
     - Flexbox
+    - GRID
     - Font Awesome
 
 ### JavaScript
@@ -19,6 +20,11 @@
     - Scroll Magic
     - Barba
     - Chroma
+    - Pexels API
+
+### REST API
+
+    - Fetch
 
 ## Feel free to contact me via LinkedIn:
 
